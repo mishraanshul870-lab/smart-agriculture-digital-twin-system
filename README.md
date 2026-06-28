@@ -1,89 +1,229 @@
-# Smart Agriculture Digital Twin System 🌾🚜
 
-An advanced, AI-powered Smart Agriculture Digital Twin system featuring a live telemetry dashboard, Gemini Vision leaf diagnostics, structured soil analysis, yield predictions, and professional executive PDF reports.
+# 🌾 Smart Agriculture Digital Twin System
 
----
+> **AI-powered Digital Twin platform for smart agriculture using React, Node.js, MongoDB, and Google Gemini AI.**
 
-## 🌟 Key Features
-* **Real-time IoT Dashboard:** Live visualization charts for ambient temperature, soil moisture, and humidity trends, updating automatically via 30-second polling.
-* **Gemini Vision leaf diagnostics:** Upload crop leaf images to run diagnoses on plant health and diseases using live Gemini models, with automatic image persistence to MongoDB.
-* **Soil Chemistry Analysis:** Performs diagnostic testing based on manual input or IoT telemetry values. Employs Gemini to output a Soil Health Score, deficiencies, suitable crops list, and fertilizer advice.
-* **Yield Prediction:** Calculates estimated yield volumes using real-time farm size, current weather reports, soil measurements, and historical irrigation logs.
-* **Reports Center:** Instantly compiles professional branded executive PDF reports (using `jspdf` and `jspdf-autotable`) detailing full farm status, diagnostics, and AI recommendations.
-* **AI Agronomist Chat:** A persistent, context-aware agronomist assistant chat focused strictly on farming queries.
+![React](https://img.shields.io/badge/React-19-61DAFB?style=for-the-badge&logo=react)
+![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?style=for-the-badge&logo=typescript)
+![Node.js](https://img.shields.io/badge/Node.js-Express-339933?style=for-the-badge&logo=node.js)
+![MongoDB](https://img.shields.io/badge/MongoDB-Atlas-47A248?style=for-the-badge&logo=mongodb)
+![Google Gemini](https://img.shields.io/badge/AI-Google%20Gemini-4285F4?style=for-the-badge)
+![Render](https://img.shields.io/badge/Hosted%20On-Render-6A5ACD?style=for-the-badge)
 
 ---
 
-## 🛠️ Technology Stack
-* **Frontend:** React 19 (SPA), TypeScript, Recharts, Framer Motion, TailwindCSS, Lucide Icons, jsPDF.
-* **Backend:** Node.js Express, TypeScript, Mongoose/MongoDB, esbuild.
-* **AI Integration:** Google Gen AI SDK (`gemini-3.5-flash`), Google Gemini REST API.
+# 📖 Project Overview
+
+Smart Agriculture Digital Twin System is a full-stack AI-powered agriculture platform that combines Digital Twin concepts, IoT simulation, cloud technologies, and Google Gemini AI to help farmers monitor farms, analyze soil, detect plant diseases, predict crop yield, and generate professional reports.
+
+## ✨ Key Features
+
+- 📊 Interactive Dashboard
+- 🚜 Farm Management
+- 📡 IoT Sensor Monitoring
+- 🧪 AI Soil Analysis
+- 🍃 AI Leaf Disease Detection
+- 🌾 AI Yield Prediction
+- 🤖 AI Agriculture Assistant
+- 📑 PDF Report Generation
+- 🔔 Notification Center
+- 🔐 JWT Authentication
+- ☁️ MongoDB Atlas Integration
+- 🚀 Render Deployment
+
+## 🌱 Supported Crops
+
+- Wheat
+- Rice
+- Cotton
+- Maize
+- Sugarcane
+- Bajra
+- Green Chillies
+- Tomato
+- Potato
+- Onion
+- Mustard
+- Custom Crops
 
 ---
 
-## 📋 API Documentation
+# 🛠 Technology Stack
 
-### 👤 User Authentication
-* `POST /api/auth/register` — Register a new user account.
-* `POST /api/auth/login` — Sign in and receive a JWT token.
+## Frontend
+- React 19
+- TypeScript
+- Tailwind CSS
+- Framer Motion
+- Recharts
+- Lucide React
 
-### 🚜 Farm twin Management
-* `GET /api/farms` — Fetch all farm twins owned by the user.
-* `POST /api/farms` — Register a new farm twin.
-* `POST /api/farms/actuator` — Toggle farm actuator valves (sprinklers, fans).
+## Backend
+- Node.js
+- Express.js
+- TypeScript
 
-### 📈 IoT Telemetry
-* `GET /api/sensors` — Fetch registered sensor nodes.
-* `POST /api/sensors` — Add a new sensor node to a farm.
-* `GET /api/sensors/readings` — Fetch historical telemetry readings for charts.
-* `POST /api/sensors/reading` — Log a new reading from a telemetry node.
+## Database
+- MongoDB Atlas
+- Mongoose
 
-### 🧪 Soil Analysis
-* `GET /api/soil-analysis` — Get historical soil logs.
-* `POST /api/soil-analysis` — Log and analyze a new soil chemistry test using Gemini AI.
+## AI
+- Google Gemini API
+- Gemini Vision
 
-### 🍂 Leaf Diagnostics
-* `GET /api/disease-history` — Fetch diagnostic history.
-* `POST /api/disease-detection` — Analyze a leaf image using Gemini Vision API.
-
-### 🔮 Yield Predictions
-* `GET /api/yield-predictions` — Fetch historical predictions.
-* `POST /api/yield-predictions/predict` — Generate a new crop yield prediction.
+## Deployment
+- GitHub
+- Render
 
 ---
 
-## 🚀 Setup & Installation
+# 📂 Project Structure
 
-### Prerequisites
-* [Node.js](https://nodejs.org) (v18 or higher)
-* [MongoDB](https://www.mongodb.com) (or Atlas cloud account. Local in-memory MongoDB will run automatically if no URI is provided).
+```text
+client/
+server/
+shared/
+README.md
+package.json
+```
 
-### 1. Clone & Install Dependencies
+---
+
+# 📚 API Documentation
+
+## Authentication
+
+| Method | Endpoint |
+|--------|----------|
+| POST | /api/auth/register |
+| POST | /api/auth/login |
+
+## Farm Management
+
+| Method | Endpoint |
+|--------|----------|
+| GET | /api/farms |
+| POST | /api/farms |
+
+## IoT Sensors
+
+| Method | Endpoint |
+|--------|----------|
+| GET | /api/sensors |
+| POST | /api/sensors |
+
+## Soil Analysis
+
+| Method | Endpoint |
+|--------|----------|
+| GET | /api/soil-analysis |
+| POST | /api/soil-analysis |
+
+## Disease Detection
+
+| Method | Endpoint |
+|--------|----------|
+| GET | /api/disease-history |
+| POST | /api/disease-detection |
+
+## Yield Prediction
+
+| Method | Endpoint |
+|--------|----------|
+| GET | /api/yield-predictions |
+| POST | /api/yield-predictions/predict |
+
+---
+
+# ⚙️ Installation
+
 ```bash
+git clone https://github.com/mishraanshul870-lab/smart-agriculture-digital-twin-system.git
+cd smart-agriculture-digital-twin-system
 npm install
 ```
 
-### 2. Configure Environment Variables
-Create a `.env` file in the root directory:
+## Environment Variables
+
 ```env
-GEMINI_API_KEY="your-google-ai-studio-key"
-AI_PROVIDER="gemini"
-MONGODB_URI="your-mongodb-atlas-uri"
+GEMINI_API_KEY=your_api_key
+AI_PROVIDER=gemini
+MONGODB_URI=your_mongodb_uri
+JWT_SECRET=your_secret
 ```
 
-### 3. Run Development Server
+Run:
+
 ```bash
 npm run dev
 ```
-*Access the app at http://localhost:3000*
 
-### 4. Build for Production
+Build:
+
 ```bash
 npm run build
 ```
-This command compiles the React frontend to `/dist` and bundles the Express backend to `/dist/server.cjs`.
 
-### 5. Launch Production Server
-```bash
-npm run start
-```
+---
+
+# ☁️ Deployment
+
+The application is deployed on **Render** with automatic deployment from the **main** GitHub branch.
+
+---
+
+# 📸 Screenshots
+
+Add screenshots here:
+
+- Dashboard
+- Farm Management
+- Soil Analysis
+- Disease Detection
+- Yield Prediction
+- AI Assistant
+- Reports
+
+---
+
+# 🔮 Future Enhancements
+
+- Real IoT Integration
+- Weather API
+- Mobile Application
+- Satellite Monitoring
+- SMS/Email Alerts
+- Multi-language Support
+- Advanced Analytics
+
+---
+
+# 📋 Known Limitations
+
+- Uses simulated IoT data.
+- Gemini API depends on available quota.
+- Weather data is manually entered.
+- No mobile application yet.
+
+---
+
+# 👨‍💻 Developer
+
+**Anshul Mishra**
+
+B.Tech Computer Science & Engineering
+
+GitHub:
+https://github.com/mishraanshul870-lab
+
+---
+
+# 📜 License
+
+This project is intended for **educational and portfolio purposes**.
+
+---
+
+# ⭐ Support
+
+If you found this repository useful, please consider giving it a ⭐ on GitHub.
