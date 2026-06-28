@@ -1,0 +1,6 @@
+{
+  "name": "Smart Agriculture Digital Twin System",
+  "description": "An AI-powered Smart Agriculture Digital Twin system featuring real-time simulated IoT sensor dashboards, crop disease detection via Gemini AI, soil analysis, and yield predictions.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

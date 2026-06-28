@@ -1,0 +1,165 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  background-color: #0B0410;
+  color: #ffffff;
+}
+
+/* Custom Scrollbar for the purple theme */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(167, 139, 250, 0.2);
+  border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(217, 70, 239, 0.4);
+}
+
+/* Hide Scrollbar util */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Markdown Styles */
+.markdown-body {
+  color: #e5e7eb;
+}
+.markdown-body p {
+  margin-bottom: 0.75rem;
+}
+.markdown-body p:last-child {
+  margin-bottom: 0;
+}
+.markdown-body strong {
+  color: #fff;
+  font-weight: 700;
+}
+.markdown-body h1, .markdown-body h2, .markdown-body h3, .markdown-body h4 {
+  color: #f3f4f6;
+  font-weight: 700;
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+  line-height: 1.25;
+}
+.markdown-body h3 {
+  font-size: 1.125rem;
+}
+.markdown-body ul, .markdown-body ol {
+  margin-top: 0.5rem;
+  margin-bottom: 0.75rem;
+  padding-left: 1.5rem;
+}
+.markdown-body ul {
+  list-style-type: disc;
+}
+.markdown-body ol {
+  list-style-type: decimal;
+}
+.markdown-body li {
+  margin-bottom: 0.25rem;
+}
+.markdown-body pre {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  overflow-x: auto;
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.markdown-body code {
+  font-family: var(--font-mono);
+  font-size: 0.875em;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 0.125rem 0.25rem;
+  border-radius: 0.25rem;
+}
+.markdown-body pre code {
+  background-color: transparent;
+  padding: 0;
+  border-radius: 0;
+}
+.markdown-body table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-size: 0.875rem;
+}
+.markdown-body th, .markdown-body td {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 0.5rem 0.75rem;
+  text-align: left;
+}
+.markdown-body th {
+  background-color: rgba(255, 255, 255, 0.05);
+  font-weight: 600;
+  color: #fff;
+}
+.markdown-body blockquote {
+  border-left: 4px solid #9333EA;
+  padding-left: 1rem;
+  color: #9ca3af;
+  margin-left: 0;
+  margin-right: 0;
+  font-style: italic;
+}
+
+/* Custom Leaflet Popups to match dark premium styling */
+.custom-leaflet-popup .leaflet-popup-content-wrapper {
+  background: rgba(18, 16, 36, 0.9) !important;
+  color: #ffffff !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  backdrop-filter: blur(12px) !important;
+  border-radius: 16px !important;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5) !important;
+}
+
+.custom-leaflet-popup .leaflet-popup-tip {
+  background: rgba(18, 16, 36, 0.9) !important;
+  border-left: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+.custom-leaflet-popup .leaflet-popup-close-button {
+  color: rgba(255, 255, 255, 0.6) !important;
+  font-size: 16px !important;
+  padding: 8px !important;
+}
+
+/* Ensure Leaflet controls match our UI theme */
+.leaflet-bar {
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06) !important;
+}
+
+.leaflet-bar a {
+  background-color: rgba(18, 16, 36, 0.8) !important;
+  color: rgba(255, 255, 255, 0.8) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+.leaflet-bar a:hover {
+  background-color: rgba(147, 51, 234, 0.2) !important;
+  color: #ffffff !important;
+}
